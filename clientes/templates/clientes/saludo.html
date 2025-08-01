@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo</title>   
+    
+</head>     
+<body>
+    <div class="container">
+        <h1>Saludo</h1>
+        <p>{{ nombre }}</p>
+    </div>
+
+    <h2>Lista de Clientes</h2>
+    <p>Total de clientes: {{ clientes|length }}</p>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nombre }} - {{cliente.email}} -- {{cliente.telefono}}</li>
+            <li>Registrado el: {{ cliente.fecha_registro }}</li>
+            <li>--------------------------</li>
+        {% empty %}
+            <li>No hay clientes registrados.</li>           
+        {% endfor %}        
+     
+    </ul>   
+    
+
+    <footer>
+        <p>&copy; 2024 Customer360</p>  
+
+    </footer>
+</body>
+</html>
+
