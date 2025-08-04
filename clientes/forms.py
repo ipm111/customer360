@@ -15,3 +15,4 @@ class ClienteForm(forms.ModelForm):
             'email': 'Correo Electrónico',
             'telefono': 'Teléfono',
         }
+        
