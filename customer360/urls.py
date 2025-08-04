@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Include the URLs from the clientes app
     path('clientes/', include('clientes.urls')),
+    path('', include('clientes.urls')),  # Default route for clientes app
 ]
