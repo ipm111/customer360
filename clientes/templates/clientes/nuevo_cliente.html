@@ -5,6 +5,9 @@
     {{ form.as_p }}
     <button type="submit">Guardar</button>
 </form>
+
+<a href="{% url 'saludo' %}">Volver al listado</a>
+
 {% if form.errors %}
     <div class="error">
         <p>Por favor corrige los errores a continuación:</p>
