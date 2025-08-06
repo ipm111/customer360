@@ -2,9 +2,11 @@ from django.urls import path
 
 from . import views 
 
+app_name = 'clientes'  # << ESTE es el namespace
+
 
 urlpatterns = [
-    path('', views.saludo, name='saludo'),    
-    path('registrar/', views.registrar_cliente, name='registrar_cliente'),
-    
+    path('lista', views.lista, name='lista'),
+ 
+    path('nuevo/', views.nuevo_cliente, name='nuevo_cliente'),
 ]
