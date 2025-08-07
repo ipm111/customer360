@@ -1,0 +1,8 @@
+<h2>Editar cliente</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Actualizar</button>
+</form>
+<a href="{% url 'clientes:lista' %}">Volver a la lista de clientes</a>
